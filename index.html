@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyrus AI</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: linear-gradient(135deg, #4A90E2, #50E3C2);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        nav {
-            background: rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: yellow;
-        }
-        main {
-            flex: 1;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        footer {
-            background: rgba(0, 0, 0, 0.2);
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: yellow;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyrus AI</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <meta name="description" content="Cyrus AI – AI image style transfer and text-to-image generation.">
 </head>
 <body>
-
-    <header>
-        <h1>Welcome to Cyrus AI</h1>
-        <p>Your trusted AI-powered image editing and generation platform.</p>
-    </header>
-
-    <nav>
+  <header>
+    <div class="container brand">
+      <h1>Cyrus AI</h1>
+      <nav>
+        <a href="index.html">Home</a>
         <a href="pricing.html">Pricing</a>
         <a href="refund.html">Refund Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="privacy.html">Privacy Policy</a>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <h2>Empowering Creativity with AI</h2>
-        <p>At Cyrus AI, we provide state-of-the-art AI tools for style transfer, text-to-image generation, and more. Our goal is to help creators, designers, and innovators bring their ideas to life effortlessly.</p>
-    </main>
+  <main class="container">
+    <section class="hero">
+      <h2>AI tools for creators & teams</h2>
+      <p>Cyrus AI provides fast, reliable style transfer and text‑to‑image generation so you can turn ideas into visuals in seconds.</p>
+      <div class="cta">
+        <a class="button" href="pricing.html">View Pricing</a>
+        <a class="button" href="mailto:Cyrus.borg.ai@gmail.com">Contact Sales</a>
+      </div>
+    </section>
 
-    <footer>
-        <p>Contact us: <a href="mailto:Cyrus.borg.ai@gmail.com">Cyrus.borg.ai@gmail.com</a></p>
-        <p>&copy; 2025 Cyrus AI. All rights reserved.</p>
-    </footer>
+    <section class="section">
+      <h3>What you get<span class="badge">Deliverables</span></h3>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Style Transfer</h3>
+          <p>Upload an image and instantly apply curated artistic styles with adjustable strength and previews.</p>
+        </div>
+        <div class="card">
+          <h3>Text‑to‑Image</h3>
+          <p>Generate high‑quality images from text prompts with size presets suitable for social, print, or web.</p>
+        </div>
+        <div class="card">
+          <h3>Account & Exports</h3>
+          <p>Personal workspace, history, and one‑click exports (PNG/JPG). Commercial use included on paid plans.</p>
+        </div>
+        <div class="card">
+          <h3>Support</h3>
+          <p>Email support at <a href="mailto:Cyrus.borg.ai@gmail.com">Cyrus.borg.ai@gmail.com</a> within 1–2 business days.</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="section">
+      <h3>Brief description</h3>
+      <p>Cyrus AI is an online service that lets users edit images with AI (style transfer) and create new images from text prompts. Customers subscribe on the Pricing page and receive access immediately after checkout.</p>
+    </section>
+
+    <section class="section">
+      <div class="legal small">
+        <p>Owner/Brand: Cyrus AI. Sole proprietor: Saleh Nabil Qasim. Contact: <a href="mailto:Cyrus.borg.ai@gmail.com">Cyrus.borg.ai@gmail.com</a>.</p>
+      </div>
+    </section>
+  
+    <section class="section">
+      <h3>About Us</h3>
+      <div class="card-grid">
+        <div class="card">
+          <img src="assets/about-sample.jpg" alt="About Cyrus AI" style="width:100%;border-radius:8px;margin-bottom:12px;">
+          <p>Cyrus AI was founded to empower creators with easy-to-use AI tools. Our mission is to make advanced image editing and generation accessible to everyone, from hobbyists to professionals.</p>
+        </div>
+        <div class="card">
+          <img src="assets/feature1.jpg" alt="Style Transfer Demo" style="width:100%;border-radius:8px;margin-bottom:12px;">
+          <p>Transform your photos instantly with our style transfer feature – choose from a variety of artistic effects and watch your image change in real time.</p>
+        </div>
+        <div class="card">
+          <img src="assets/feature2.jpg" alt="Text-to-Image Demo" style="width:100%;border-radius:8px;margin-bottom:12px;">
+          <p>Create unique visuals from text prompts using our text-to-image engine, delivering high-quality results ready for print, web, or social media.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container small">
+      <p>&copy; 2025 Cyrus AI. All rights reserved. • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="refund.html">Refunds</a></p>
+    </div>
+  </footer>
 </body>
 </html>

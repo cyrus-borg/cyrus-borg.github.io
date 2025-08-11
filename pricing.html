@@ -1,147 +1,68 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Upgrade to Premium</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<style>
-  :root{
-    --bg:#0b0d10;
-    --card:#12161b;
-    --muted:#a9b0b7;
-    --primary:#4da3ff;
-    --primary-2:#7b5cff;
-    --ok:#21d07a;
-  }
-  html,body{margin:0; padding:0; background:linear-gradient(135deg,#0b0d10,#0a0620); color:#e9eef3; font-family:system-ui, "Segoe UI", Roboto, Arial, sans-serif;}
-  .wrap{max-width:1100px; margin:0 auto; padding:40px 20px;}
-  header h1{margin:0 0 10px; font-size:34px;}
-  header p{margin:0 0 30px; color:var(--muted);}
-
-
-  .grid{
-    display:grid; gap:20px;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-  }
-  @media (max-width: 900px){
-    .grid{grid-template-columns: 1fr;}
-  }
-
-  .plan{
-    background: radial-gradient(100% 100% at 0% 0%, #1a1f27 0%, #12161b 60%);
-    border:1px solid #1f2630; border-radius:18px; padding:24px; position:relative;
-    transition:.25s transform, .25s box-shadow, .25s border-color;
-    cursor:pointer;
-    display:flex; flex-direction:column; align-items:flex-start;
-    text-align:left;
-  }
-  .plan:hover{ transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.35); border-color:#2a3340; }
-  .badge{position:absolute; top:14px; right:14px; font-size:12px; background:#1e2632; color:#9fb5ff; padding:6px 10px; border-radius:999px; border:1px solid #2c3543;}
-  .title{font-size:22px; margin:8px 0 12px;}
-  .price{font-size:32px; font-weight:700; margin:0 0 16px;}
-  .price small{font-size:14px; color:var(--muted); font-weight:400;}
-  ul{list-style:none; padding:0; margin:0 0 16px;}
-  ul li{display:flex; align-items:center; gap:10px; margin:10px 0; color:#d6dde5;}
-  ul li .dot{width:8px; height:8px; border-radius:50%; background:var(--ok);}
-  .cta{
-    margin-top:auto;
-    padding:12px 16px; border:none; border-radius:12px; font-size:15px; font-weight:600;
-    background: linear-gradient(90deg, var(--primary), var(--primary-2));
-    color:#fff; cursor:pointer; width:100%; transition:.25s opacity;
-  }
-  .cta:hover{opacity:.92;}
-  .highlight{
-    border:1.5px solid #3a69ff;
-    background: radial-gradient(110% 110% at 0% 0%, #1b2230 0%, #141a22 60%);
-  }
-
-  .note{margin-top:24px; color:var(--muted); font-size:14px;}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing – Cyrus AI</title>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Choose your plan</h1>
-      <p>Start free, then upgrade to get more monthly attempts and faster support.</p>
-    </header>
+<header>
+  <div class="container brand">
+    <h1>Cyrus AI</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="refund.html">Refund Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <section class="hero">
+    <h2>Simple, transparent pricing</h2>
+    <p>No hidden fees. Cancel anytime.</p>
+  </section>
 
-    <footer class="site-footer">
-  <p>
-    <a href="terms.html">Terms & Conditions</a> ·
-    <a href="privacy.html">Privacy Policy</a> ·
-    <a href="refund.html">Refund Policy</a>
-  </p>
-  <p>© 2025 Cyrus AI — Owner: Saleh Nabil</p>
-</footer>
-    <section class="grid">
-      <!-- Basic -->
-      <button class="plan" data-plan="basic" onclick="redirectToCheckout('basic')">
-        <span class="badge">Starter</span>
-        <h3 class="title">Basic</h3>
-        <p class="price">$4.99 <small>/ month</small></p>
-        <ul>
-          <li><span class="dot"></span> 30 attempts / month</li>
-          <li><span class="dot"></span> Standard support</li>
-          <li><span class="dot"></span> All free features + more</li>
-        </ul>
-        <div class="cta">Choose Basic</div>
-      </button>
-
-      <!-- Pro (Most Popular) -->
-      <button class="plan highlight" data-plan="pro" onclick="redirectToCheckout('pro')">
-        <span class="badge">Most Popular</span>
-        <h3 class="title">Pro</h3>
-        <p class="price">$9.99 <small>/ month</small></p>
-        <ul>
-          <li><span class="dot"></span> 70 attempts / month</li>
-          <li><span class="dot"></span> Faster support</li>
-          <li><span class="dot"></span> Early access to new features</li>
-        </ul>
-        <div class="cta">Choose Pro</div>
-      </button>
-
-      <!-- Pro+ -->
-      <button class="plan" data-plan="pro_plus" onclick="redirectToCheckout('pro_plus')">
-        <span class="badge">For Power Users</span>
-        <h3 class="title">Pro+</h3>
-        <p class="price">$19.99 <small>/ month</small></p>
-        <ul>
-          <li><span class="dot"></span> 150 attempts / month</li>
-          <li><span class="dot"></span> Priority support</li>
-          <li><span class="dot"></span> Higher limits as we grow</li>
-        </ul>
-        <div class="cta">Choose Pro+</div>
-      </button>
-    </section>
-
-    <p class="note">Cancel anytime. Terms apply.</p>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Free</h3>
+      <p>$0 / month</p>
+      <ul>
+        <li>Basic style transfer</li>
+        <li>Low‑res text‑to‑image</li>
+        <li>Community support</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Pro</h3>
+      <p>$19 / month</p>
+      <ul>
+        <li>All AI features unlocked</li>
+        <li>HD exports</li>
+        <li>Commercial use</li>
+        <li>Email support (24–48h)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Enterprise</h3>
+      <p>Custom</p>
+      <ul>
+        <li>Bulk credits & SSO</li>
+        <li>Service-level agreement</li>
+        <li>Priority support</li>
+      </ul>
+    </div>
   </div>
 
-  <script type="module">
-    // Replace with your real checkout/payment links
-    const CHECKOUT_URLS = {
-      basic:   "/checkout?plan=basic",
-      pro:     "/checkout?plan=pro",
-      pro_plus:"/checkout?plan=pro_plus",
-    };
-
-    function redirectToCheckout(plan){
-      // 1) Send the user to your payment provider / checkout page
-      window.location.href = CHECKOUT_URLS[plan];
-
-      // 2) After successful payment (on your success return URL),
-      // call your backend/Webhook to grant the plan in Firestore.
-      // Example (server-side): call the "applyPlan" Cloud Function securely.
-    }
-  </script>
-  <footer class="site-footer">
-  <p>
-    <a href="terms.html">Terms & Conditions</a> ·
-    <a href="privacy.html">Privacy Policy</a> ·
-    <a href="refund.html">Refund Policy</a>
-  </p>
-  <p>© 2025 Cyrus AI — Owner: Saleh Nabil</p>
+  <hr>
+  <p class="small">All prices in USD. Taxes may apply. For purchase questions, email <a href="mailto:Cyrus.borg.ai@gmail.com">Cyrus.borg.ai@gmail.com</a>.</p>
+</main>
+<footer>
+  <div class="container small">
+    <p>&copy; 2025 Cyrus AI. <a href="terms.html">Terms</a> • <a href="privacy.html">Privacy</a> • <a href="refund.html">Refunds</a></p>
+  </div>
 </footer>
 </body>
 </html>

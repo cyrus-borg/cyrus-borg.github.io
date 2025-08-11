@@ -1,0 +1,45 @@
+
+/* Cyrus AI - simple cohesive style */
+:root{
+  --grad-a:#4A90E2;
+  --grad-b:#50E3C2;
+  --ink:#0b1b2a;
+  --paper:#ffffff;
+  --accent:#ffe26b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;
+  color: var(--paper);
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  background: linear-gradient(135deg,var(--grad-a),var(--grad-b));
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+header{padding:24px 0;background:rgba(0,0,0,.15);backdrop-filter:saturate(1.2) blur(2px);}
+.brand{display:flex;gap:10px;align-items:center;justify-content:space-between}
+.brand h1{margin:0;font-weight:800;letter-spacing:.5px}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{font-weight:700}
+.hero{padding:48px 0;text-align:center}
+.hero h2{font-size:clamp(28px,5vw,40px);margin:0 0 12px}
+.hero p{opacity:.95;margin:0 auto;max-width:800px;line-height:1.7}
+.cta{margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.button{background:var(--ink);color:var(--paper);padding:12px 18px;border-radius:10px;font-weight:700;display:inline-block}
+.button:hover{filter:brightness(1.1)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.card{background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px}
+.card h3{margin-top:0}
+.section{padding:24px 0}
+footer{margin-top:auto;background:rgba(0,0,0,.15);padding:18px 0}
+.small{opacity:.9;font-size:.95rem}
+.legal{background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:18px}
+main{padding-bottom:28px}
+hr{border:none;border-top:1px solid rgba(255,255,255,.35);margin:24px 0}
+table{width:100%;border-collapse:collapse;background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.22);border-radius:10px;overflow:hidden}
+th,td{padding:14px;border-bottom:1px solid rgba(255,255,255,.18)}
+th{text-align:left}
+.badge{padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.25);font-size:.8rem;margin-left:6px}
